@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>TEdashboard</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <!--头部的盒子-->
+  <header>
+    <h1>TEdashboard</h1>
+  </header>
+  <!--页面主体部分-->
+  <section class="mainbox">
+    <div class="column">
+      <div class="panel bar">
+        <!--<h2>The Length of TE</h2>-->
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel pie">
+        <h2>The Length of TE</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel 3">
+        <h2>The Length of TE</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="column">
+      <!--搜索模块-->
+      <div class="search">
+        <div class="searchbar">
+          <img src=./images/search.png class="mg">
+          <input type="text" id="search" name="" class="" value="Please input TE name"
+          onfocus="if(value='Please input TE name')value=''"
+          onblur="if(!value)value='Please input TE name'"
+          >
+        </div>
+      </div>
+      <!--dendrogram模块-->
+      <div class="clas">
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="panel 1">
+        <h2>The Length of TE</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel 2">
+        <h2>The Length of TE</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel 3">
+        <h2>The Length of TE</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div> 
+    </div>
+  </section>
+  <script src="js/flexbile.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/length.js"></script>
+
+</body>
+</html>
