@@ -27,28 +27,20 @@
       </div>
       <div class="panel 2">
         <h2>Download files</h2>
-        <div class="download">
-            <ul >
-              <li><a href='./fasta/hg38_TE.fa' download="hg38_TE.fa"> Download the TE's fasta file</a></li>
-              <li><a href='./gtf/hg38_rmsk_TE.gtf' download="hg38_TE.gtf"> Download the TE's gtf file</a></li>
+        <div class="download" id="download">
+            <ul>
+              <li><a href='fasta/ .fa' download=" .fa"> Download the  's fasta file</a></li>
+              <li><a href='gtf/ .gtf' download=" .gtf"> Download the  's gtf file</a></li>
             </ul>
         </div>
         <div class="panel-footer"></div>
       </div>
+
     </div>
     <div class="column">
       <!--搜索模块-->
       <div class="search">
         <div class="searchbar">
-          <!--<img src=./images/search.png class="mg">-->
-          <!-- <form method="post">
-          <input type="image" class="mg" src=./images/search.png id="btn">
-          <input type="text" id="search" name="gene_name" class="" value="Please input TE name"
-          onfocus="if(value='Please input TE name')value=''"
-          onblur="if(!value)value='Please input TE name'"
-          required="required"
-          >
-          </form> -->
           <input type="image" class="mg" src=./images/search.png id="btn">
           <input type="text" id="search" name="gene_name" class="" value="Please input TE name"
           onfocus="if(value='Please input TE name')value=''"
@@ -79,13 +71,27 @@
       </div> 
     </div>
   </section>
+  <script type="text/javascript">
+    console.log(location.href);
+    const idx = location.href.indexOf('name=');
+    const val = location.href.slice(idx+5);
+    window.onload = () => {
+      document.getElementById('download').innerHTML = 
+      `
+        <ul >
+          <li><a href='fasta/${val}.fa' download="${val}.fa"> Download the ${val}'s fasta file</a></li>
+          <li><a href='gtf/${val}.gtf' download="${val}.gtf"> Download the ${val}'s gtf file</a></li>
+        </ul>
+      `;
+    };
+  </script>
   <script src="js/echarts.min.js"></script>
   <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/index.js"></script>
-  <script src="js/length.js"></script>
-  <script src="js/copy_number.js"></script>
-  <script src="js/test_line_ATGC.js"></script>
-  <script src="js/test_pie_ATGC.js"></script>
+  <script src="js/copy_number_search.js"></script>
+  <script src='js/index.js'></script>
+  <script src="js/pie_ATGC_search.js"></script>
+  <script src='js/length_search.js'></script>
+  <script src="js/line_ATGC_search.js"></script>
   <script>
       document.getElementById('btn').addEventListener('click',  () => {
         console.log('aaaa');

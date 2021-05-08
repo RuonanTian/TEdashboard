@@ -87,19 +87,27 @@ header h1 {
 }
 .mainbox .panel h2 {
   height: 1.5rem;
-  color: mediumpurple line-hight 1.5rem;
+  color: #403f41;
   text-align: center;
-  font-size: 0.3rem;
+  font-size: 1.1rem;
 }
-.mainbox .panel .chart {
+.mainbox .chart {
   height: 14.5rem;
 }
-.mainbox .search {
+.mainbox .download {
+  height: 10rem;
+  padding-top: 3rem;
+  padding-left: 6rem;
+}
+.mainbox .download ul {
+  list-style-type: none;
+}
+.search {
   margin-bottom: 0.375rem;
   padding: 0.1875rem;
   height: 6rem;
 }
-.mainbox .search #search {
+.search #search {
   width: 25rem;
   height: 1.8rem;
   border: none;
@@ -111,7 +119,7 @@ header h1 {
   margin-left: 10px;
   margin-top: 0.25rem;
 }
-.mainbox .search .searchbar {
+.search .searchbar {
   /*目的是设置自定义边框，比如圆角与阴影*/
   border: #dadada solid 1px;
   border-radius: 6em;
@@ -121,21 +129,21 @@ header h1 {
   margin: 0 auto;
   margin-top: 1.5rem;
 }
-.mainbox .search .mg {
+.search .mg {
   height: 1.5rem;
   margin-left: 0.8rem;
   margin-top: 0.25rem;
 }
-.mainbox .search #search,
-.mainbox .search .mg {
+.search #search,
+.search .mg {
   vertical-align: middle;
 }
-.mainbox .clas {
+.clas {
   position: relative;
   height: 35rem;
   border: 1px solid rgba(81, 25, 186, 0.17);
 }
-.mainbox .clas .chart {
+.clas .chart {
   position: absolute;
   top: 0;
   left: 0;
